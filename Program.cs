@@ -1,63 +1,27 @@
-﻿using System.Linq;
-namespace ConsoleApp2
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Net;
+using System.Runtime.Intrinsics;
+using System.Text;
+using System.Threading.Tasks;
+namespace varia
 {
-    static class ArrayExtensions
+    class Program
+{
+    static void Main(string[] args)
     {
-        public static int IndexOf<T>(this T[] array, T value)
-        {
-            return Array.IndexOf(array, value);
 
+        Console.WriteLine("primer numero 1: ");
+        int v1 = int.Parse(Console.ReadLine());
+        Console.WriteLine("segundo numero 2: ");
+        int v2 = int.Parse(Console.ReadLine());
+            v1 = v1 + v2;
+            v2 = v1 - v2;
+            v1 = v1 - v2;
+            Console.WriteLine("El primer numero " + v1);
+            Console.WriteLine("El segundo numero " + v2);
         }
-    }
-    internal class Program
-    {
-        public static int Convert(char letter)
-        {
-            char[] alfabeto = { ' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', };
-            int num = alfabeto.IndexOf(letter);
-            return num;
-
-        }
-        static void Main(string[] args)
-        {
-            int[,] clave = { { 1, 2, 1 }, { 0, -1, 3 }, { 2, 1, 0 } };
-            string frase;
-            Console.WriteLine("Ingresa el texto a codificar");
-            frase = Console.ReadLine();
-
-            char[] frase_array = frase.ToArray();
-            int conteo = frase.Length;
-            while (conteo % 3 == 1)
-            {
-                conteo++;
-            }
-            int[,] pos = new int[conteo /3, 3];
-
-            int p= 0;
-            for (int i = 0; i < conteo / 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    if (p < frase_array.Length)
-                    {
-                        pos[i, j] = Convert(frase_array[p]);
-
-                    }
-                    else
-                    {
-                        pos[i, j] = 0;
-                    }
-                    p++;
-                }
-            }
-            for (int i = 0; i < conteo / 3; i++)
-            { 
-                for (int j = 0; j < 3; j++ )
-                { 
-                    Console.Write(pos[i, j] + " ");
-                }
-                Console.WriteLine();
-            }
-        }
-    }
-    }
+}
+}

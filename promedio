@@ -1,0 +1,15 @@
+double sum = 0, pr = 0;
+Console.Write("Cuantas calificaciones tienes?");
+int n = int.Parse(Console.ReadLine());
+double[] numeros = new double[n];
+for (int i = 0; i < numeros.Length; i++)
+{
+    Console.Write("Que calificacion obtuviste:");
+    numeros[i] = Convert.ToDouble(Console.ReadLine());
+    sum += numeros[i];
+}
+pr = sum / numeros.Length;
+
+Console.WriteLine("Tu promedio es : " + pr);
+
+Console.ReadKey();

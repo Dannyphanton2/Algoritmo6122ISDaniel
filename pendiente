@@ -1,0 +1,42 @@
+Boolean con = true;
+{
+    Console.Write("Cuantos datos quieres ingresar?");
+    int n = int.Parse(Console.ReadLine());
+    int[] numeros = new int[n];
+
+    for (int i = 0; i = numeros.Length; i++)
+    {
+        Console.Write("ingresa tu numero:");
+        numeros[i] = int.Parse(Console.ReadLine());
+        {
+            if (numeros[i] == numeros[i])
+            {
+                con = true;
+            }
+            else
+            {
+                con = false;
+            }
+            if (numeros[i] > numeros[i])
+            {
+                con = false;
+            }
+            else
+            {
+                con = true;
+                }
+            }
+        }
+    }
+    {
+        if (con == false)
+        {
+            Console.WriteLine("N repe");
+        }
+        if (con == true)
+        {
+
+            Console.WriteLine("O repe");
+        }
+        Console.ReadKey();
+    }

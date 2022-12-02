@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace invertir_numero
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int invertir, c_one, c_two, c_three, r_one, r_two, r_three, c_fir, r_fir;
+            Console.WriteLine("ingresa un numero de 4 digitos");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+
+            c_one = num / 10;
+            c_two = c_one / 10;
+            c_three = c_two / 10;
+            c_fir = c_three / 10;
+            r_one = num % 10;
+            r_two = c_one % 10;
+            r_three = c_two % 10;
+            r_fir = c_three % 10;
+            invertir = r_one * 1000 + r_two * 100 + r_three * 10 + c_three;
+
+            Console.Write("El numero " + num + "\t Invertido es " + invertir);
+            Console.ReadKey();
+        }
+    }
+}
